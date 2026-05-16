@@ -10,63 +10,34 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <div class="app">
-
-    <!-- API Key Banner -->
-    <div class="api-banner" id="api-banner">
-      <i class="ti ti-key"></i>
-      <span>Paste your Groq API key:</span>
-      <input type="password" id="api-key-input" placeholder="gsk_..." />
-      <button onclick="saveApiKey()">Save</button>
-    </div>
-
-    <!-- Header -->
     <div class="header">
-      <div class="avatar">
-        <i class="ti ti-sparkles"></i>
-      </div>
+      <div class="avatar"><i class="ti ti-sparkles"></i></div>
       <div class="header-info">
         <div class="name">AI Assistant</div>
-        <div class="status">
-          <span class="status-dot"></span>Online — Powered by Groq (Free)
-        </div>
+        <div class="status"><span class="status-dot"></span>Online — Free for everyone!</div>
       </div>
       <div class="model-badge">llama-3.3-70b</div>
     </div>
-
-    <!-- Messages -->
     <div class="messages" id="messages">
       <div class="msg bot">
         <div class="msg-avatar"><i class="ti ti-sparkles"></i></div>
         <div class="bubble">Hey! 👋 I'm your free AI assistant. Ask me anything!</div>
       </div>
     </div>
-
-    <!-- Suggestion Chips -->
     <div class="suggestions" id="suggestions">
       <button class="chip" onclick="useChip(this)">What can you do?</button>
       <button class="chip" onclick="useChip(this)">Write a short poem</button>
       <button class="chip" onclick="useChip(this)">Explain AI in simple terms</button>
       <button class="chip" onclick="useChip(this)">Give me a fun fact</button>
     </div>
-
-    <!-- Input Area -->
     <div class="input-area">
-      <textarea
-        id="input"
-        placeholder="Type a message... (Shift+Enter for new line)"
-        rows="1"
-        onkeydown="handleKey(event)"
-        oninput="autoResize(this)"
-      ></textarea>
+      <textarea id="input" placeholder="Type a message... (Shift+Enter for new line)" rows="1" onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
       <button class="send-btn" id="send-btn" onclick="sendMessage()" aria-label="Send message">
         <i class="ti ti-send-2"></i>
       </button>
     </div>
-
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
